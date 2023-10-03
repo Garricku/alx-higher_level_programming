@@ -4,5 +4,5 @@ for i in range(0, 10):
         if i < j:
             if (i + j) > 1:
                 print(", ", end='')
-            print(str(i) + str(j), end="")
+            print("{}{}".format(str(i), str(j)), end="")
 print('', end='\n')
