@@ -9,4 +9,9 @@ elif last_digit < 6 and last_digit != 0:
     status = " and is less than 6 and not 0"
 else:
     status = " and is 0"
-print(f"Last digit of {number} is " + str(last_digit) + status)
+if (str(number)[0]) == '-' and last_digit != 0:
+    negative = True
+    if negative == True:
+        print(f"Last digit of {number} is -" +str(last_digit) + status)
+else:
+    print(f"Last digit of {number} is " + str(last_digit) + status)
