@@ -7,18 +7,26 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *list_input = list, *list_copy = list;
+	int i, step;
+	listint_t *slow = list, *fast = list->next;
 
 	if (list == NULL)
 		return (0);
 
-	while ((list_input = list_input->next) && (list_copy = list_copy->next->next))
-	{
-		if (list_input == NULL || list_copy == NULL)
-			return (0);
+	step = 1;
 
-		else if (list_input == list_copy)
+	while (fast != NULL && fast->next != NULL)
+	{
+		slow = slow->next;
+		for (i = 0; i < step; ++i)
+		{
+			fast = fast->next;
+			if (fast == NULL)
+				return (0);
+		}
+		if (slow == fast)
 			return (1);
+		step *= 2;
 	}
 	return (0);
 }
