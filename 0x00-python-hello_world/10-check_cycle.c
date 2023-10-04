@@ -12,8 +12,11 @@ int check_cycle(listint_t *list)
 	if (list == NULL)
 		return (0);
 
-	if ((list_input = list_input->next) && (list_copy = list_copy->next->next))
+	while ((list_input = list_input->next) && (list_copy = list_copy->next->next))
 	{
+		if ((list_input == NULL))
+			return (0);
+
 		if (list_input == list_copy)
 			return (1);
 	}
