@@ -1,6 +1,2 @@
 #!/bin/bash
-pyfile=$PYFILE
-if [ -n "$pyfile" ]; then
-	python -m py_compile "$pyfile"
-	mv "${pyfile}c" "${pyfile}c"
-fi
+python3 -m $PYFILE
