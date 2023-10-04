@@ -14,7 +14,7 @@ int check_cycle(listint_t *list)
 
 	while ((list_input = list_input->next) && (list_copy = list_copy->next->next))
 	{
-		if (list_input == NULL)
+		if (list_input == NULL || list_copy == NULL)
 			return (0);
 
 		else if(list_input == list_copy)
