@@ -12,7 +12,7 @@ int check_cycle(listint_t *list)
 	if (list == NULL)
 		return (0);
 
-	while ((list_input = list_input->next) && (list_copy = list_copy->next->next))
+	while ((list_input) && (list_copy = list_copy->next->next))
 	{
 		if (list_input == NULL || list_copy == NULL)
 			return (0);
