@@ -9,7 +9,10 @@ int check_cycle(listint_t *list)
 {
 	listint_t *list_input = list, *list_copy = list;
 
-	while ((list_input = list_input->next) && (list_copy = list_copy->next->next))
+	if (list == NULL)
+		return (0);
+
+	if ((list_input = list_input->next) && (list_copy = list_copy->next->next))
 	{
 		if (list_input == list_copy)
 			return (1);
