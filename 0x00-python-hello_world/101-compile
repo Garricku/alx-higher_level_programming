@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 pyfile=$PYFILE
 if [ -n "$pyfile" ]; then
 	python -m py_compile "$pyfile"
