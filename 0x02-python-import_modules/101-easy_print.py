@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-python3 esyprint.py
+__import__("sys").stdout.write("#pythoniscool\n")
