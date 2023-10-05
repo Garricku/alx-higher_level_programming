@@ -4,9 +4,9 @@ from calculator_1 import sub
 from calculator_1 import mul
 from calculator_1 import div
 if __name__ == "__main__":
-    a = 5
-    b = 10
-    print(f"{b:d} + {a:d} = {add(b, a):d}")
-    print(f"{b:d} - {a:d} = {sub(b, a):d}")
-    print(f"{b:d} * {a:d} = {mul(b, a):d}")
-    print(f"{b:d} / {a:d} = {div(b, a):d}")
+    a = 10
+    b = 5
+    print(f"{a:d} + {b:d} = {add(a, b):d}")
+    print(f"{a:d} - {b:d} = {sub(a, b):d}")
+    print(f"{a:d} * {b:d} = {mul(a, b):d}")
+    print(f"{a:d} / {b:d} = {div(a, b):d}")
