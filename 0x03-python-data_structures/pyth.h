@@ -3,25 +3,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <python.h>
+#include <listobject.h>
+#include <object.h>
 
-/**
- * pyobj - Python object.
- * @num: A value.
- */
-typedef struct pyobj
-{
-	int num;
-} PyObject;
-
-/**
- *  pylist - A struct for pylist.
- *  @base: The base object.
- *  @size: The size allocation.
- */
-typedef struct pylist
-{
-	PyObject base;
-	int size;
-} PyListObject;
+void print_python_list_info(PyObject *p);
 
 #endif
