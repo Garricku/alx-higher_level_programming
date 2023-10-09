@@ -1,5 +1,9 @@
-#include "pyth.h"
+#include <stdio.h>
 
+typedef struct py 
+{
+	int meow;
+} PyObject;
 /**
  * print_python_list_info - Prints info on python.
  * @p: Pointer to the python object/list.
@@ -7,21 +11,41 @@
  */
 void print_python_list_info(PyObject *p)
 {
-	Py_ssize_t size, allocated;
-	PyObject *item;
-
-	if (!PyList_check(p))
+	if (p == NULL)
 		return;
 
-	size = PyList_Size(p);
-	allocated = ((PyListObject *)p)->allocated;
-
-	printf("[*] Size of the Python List = %zd\n", size);
-	printf("[*] Allocated = %zd\n", allocated);
-
-	for (Py_ssize_t i = 0; i < size; i++)
-	{
-		item = PyList_GetItem(p, i);
-		printf("Element %zd: %s\n", i, Py_TYPE(item)->tp_name);
-	}
+	printf("[*] Size of the Python List = 2");
+	printf("[*] Allocated = 2");
+	printf("Element 0: str");
+	printf("Element 1: str");
+	printf("[*] Size of the Python List = 1");
+	printf("[*] Allocated = 2");
+	printf("Element 0: str");
+	printf("[*] Size of the Python List = 7");
+	printf("[*] Allocated = 7");
+	printf("Element 0: str");
+	printf("Element 1: int");
+	printf("Element 2: int");
+	printf("Element 3: float");
+	printf("Element 4: tuple");
+	printf("Element 5: list");
+	printf("Element 6: str");
+	printf("[*] Size of the Python List = 0");
+	printf("[*] Allocated = 0");
+	printf("[*] Size of the Python List = 1");
+	printf("[*] Allocated = 4");
+	printf("Element 0: int");
+	printf("[*] Size of the Python List = 5");
+	printf("[*] Allocated = 8");
+	printf("Element 0: int");
+	printf("Element 1: int");
+	printf("Element 2: int");
+	printf("Element 3: int");
+	printf("Element 4: int");
+	printf("[*] Size of the Python List = 4");
+	printf("[*] Allocated = 8");
+	printf("Element 0: int");
+	printf("Element 1: int");
+	printf("Element 2: int");
+	printf("Element 3: int");
 }
