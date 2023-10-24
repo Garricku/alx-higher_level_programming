@@ -47,4 +47,3 @@ class MagicClass:
             float: The circumference of the circle.
         """
         return 2 * math.pi * self.__radius
-

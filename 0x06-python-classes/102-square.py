@@ -87,7 +87,8 @@ class Square:
 
     def __gt__(self, other):
         """
-        Determines if this Square instance is greater than another Square instance.
+        Determines if this Square instance is greater than another Square
+        instance.
 
         Args:
             other (Square): The other Square instance to compare to.
@@ -100,21 +101,22 @@ class Square:
 
     def __ge__(self, other):
         """
-        Determines if this Square instance is greater than or equal to 
+        Determines if this Square instance is greater than or equal to
         another Square instance.
 
         Args:
             other (Square): The other Square instance to compare to.
 
         Returns:
-            bool: True if this Square instance is greater than or equal to other,
-            False otherwise.
+            bool: True if this Square instance is greater than or equal to
+            other, False otherwise.
         """
         return self.area() >= other.area()
 
     def __lt__(self, other):
         """
-        Determines if this Square instance is less than another Square instance.
+        Determines if this Square instance is less than another Square
+        instance.
 
         Args:
             other (Square): The other Square instance to compare to.
@@ -138,4 +140,3 @@ class Square:
             False otherwise.
         """
         return self.area() <= other.area()
-

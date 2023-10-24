@@ -113,15 +113,15 @@ class Square:
             print(" " * self.__position[0] + "#" * self.__size)
 
     def __str__(self):
-      """
-      Returns a string representation of this Square instance.
-      """
-      result = ""
+        """
+        Returns a string representation of this Square instance.
+        """
+        result = ""
 
-      for i in range(self.__position[1]):
-          result += "\n"
+        for i in range(self.__position[1]):
+            result += "\n"
 
-      for i in range(self.__size):
-          result += " " * self.__position[0] + "#" * self.__size + "\n"
+        for i in range(self.__size):
+            result += " " * self.__position[0] + "#" * self.__size + "\n"
 
-      return result[:-1]
+        return result[:-1]
