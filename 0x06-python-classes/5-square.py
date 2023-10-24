@@ -28,6 +28,7 @@ class Square:
             int: The value of the __size attribute.
         """
         return self.__size
+
     @size.setter
     def size(self, value):
         """

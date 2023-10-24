@@ -18,6 +18,7 @@ class Square:
             ValueError: If size is less than 0.
         """
         self.size = size
+
     @property
     def size(self):
         """
@@ -55,4 +56,3 @@ class Square:
             int: The area of the square.
         """
         return self.__size ** 2
-
