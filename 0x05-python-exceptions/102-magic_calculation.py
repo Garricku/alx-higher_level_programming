@@ -1,13 +1,21 @@
-#!/usr/bun/python3
 def magic_calculation(a, b):
+    """
+    This function replicates the behavior of the given Python bytecode.
+
+    Args:
+        a (int): The first integer.
+        b (int): The second integer.
+
+    Returns:
+        int: The result of the calculation.
+    """
     result = 0
-    for i in range(1, 3):
+    for i in range(1, 4):
         try:
-            if i > len([a, b]):
+            if i > a:
                 raise Exception("Too far")
-            else:
-                result += ([a, b][i-1] ** i) / (i)
+            result += a ** b / i
         except Exception:
-            result += a + b
-            break
+            result += b
+            continue
     return result
