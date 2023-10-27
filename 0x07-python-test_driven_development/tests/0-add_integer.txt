@@ -1,0 +1,19 @@
+import unittest
+from add_integer import add_integer
+
+class TestAddInteger(unittest.TestCase):
+    def test_add_integer(self):
+        self.assertEqual(add_integer(3, 4), 7)
+        self.assertEqual(add_integer(-3, 4), 1)
+        self.assertEqual(add_integer(7, 0), 7)
+        self.assertEqual(add_integer(1.5, 1), 2)
+        self.assertEqual(add_integer(-3, -2), -5)
+        with self.assertRaises(TypeError):
+            add_integer()
+        with self.assertRaises(TypeError):
+            add_integer(4, "school")
+        with self.assertRaises(TypeError):
+            add_integer(None)
+
+if __name__ == '__main__':
+    unittest.main()
