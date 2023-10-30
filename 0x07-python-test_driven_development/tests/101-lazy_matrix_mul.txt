@@ -1,0 +1,9 @@
+import unittest
+
+class TestMatrixMul(unittest.TestCase):
+    def test_matrix_mul(self):
+        self.assertEqual(matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]]), [[19, 22], [43, 50]])
+        self.assertEqual(matrix_mul([[1.5]], [[2]]), [[3]])
+        self.assertRaises(TypeError, matrix_mul, [[1], [2]], [[3], [4], [5]])
+        self.assertRaises(TypeError, matrix_mul, [[1], [2]], [[3], ["four"]])
+        self.assertRaises(ValueError, matrix_mul, [], [])
