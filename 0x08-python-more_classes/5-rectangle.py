@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A class that defines a rectangle."""
 
+
 class Rectangle:
     """A class that defines a rectangle."""
     def __init__(self, width=0, height=0):
@@ -66,7 +67,8 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
-      print("Bye rectangle...")
+        print("Bye rectangle...")
+
 
 if __name__ == '__main__':
     pass

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A class that defines a rectangle."""
 
+
 class Rectangle:
     """A class that defines a rectangle."""
     def __init__(self, width=0, height=0):
@@ -64,6 +65,7 @@ class Rectangle:
     def __repr__(self):
         """Returns a string representation of the rectangle to recreate it."""
         return "Rectangle({}, {})".format(self.width, self.height)
+
 
 if __name__ == '__main__':
     pass

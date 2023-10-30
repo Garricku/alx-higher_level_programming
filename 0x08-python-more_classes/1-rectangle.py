@@ -52,5 +52,6 @@ class Rectangle:
         else:
             self.__height = value
 
-    if __name__ == '__main__':
-        pass
+
+if __name__ == '__main__':
+    pass

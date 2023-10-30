@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Module for queens problem"""
+
+
 import sys
+
 
 def nqueens(N, board=[], row=0):
     if row == N:
@@ -7,8 +11,10 @@ def nqueens(N, board=[], row=0):
         return
 
     for col in range(N):
-        if all(col != c and row - r != abs(col - c) for r, c in enumerate(board)):
+        if all(col != c and row - r != abs(col - c)
+                for r, c in enumerate(board)):
             nqueens(N, board + [col], row + 1)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
