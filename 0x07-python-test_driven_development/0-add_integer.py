@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-add_integer module for the addition function.
-Tested with docstrings.
-Test files in test directory.
-"""
+"""add_integer module for the addition function. Tested with docstrings."""
 
 
 def add_integer(a, b=98):
@@ -20,7 +16,7 @@ def add_integer(a, b=98):
     Returns:
         The sum of a and b.
     """
-    result = 0
+
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
