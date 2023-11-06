@@ -9,6 +9,7 @@ Module MyList
 	Test_0 - create a list empty.
 	>>> my_list = MyList()
 	>>> my_list.print_sorted()
+	[]
 	
 	Test_1 - ! item list.
 	>>> my_list.append(1)
