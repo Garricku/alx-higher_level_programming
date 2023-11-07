@@ -2,13 +2,9 @@
 """Defines a module called 7-add_item."""
 
 import sys
-"""Imports the sys module."""
-
 import os.path
-"""Imports the os path modele."""
-
 from os import path
-"""Imports the path os module."""
+"""Imports the sys and path os modules."""
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 """Defines the functions imported from 5-save_to_json_file module."""

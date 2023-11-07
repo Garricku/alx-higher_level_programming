@@ -14,6 +14,7 @@ def print_metrics(total_size, status_codes):
         if status_codes[code] > 0:
             print("{}: {}".format(code, status_codes[code]))
 
+
 if __name__ == "__main__":
     count = 0
     total_size = 0
