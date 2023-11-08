@@ -12,4 +12,4 @@ def append_after(filename="", search_string="", new_string=""):
         for line in lines:
             my_file.write(line)
             if search_string in line:
-                my_file.write(new_string + '\n')
+                my_file.write(new_string)
