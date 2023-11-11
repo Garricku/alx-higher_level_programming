@@ -160,7 +160,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
         if len(args) >= 3:
-                self.__height = args[3]
+                self.__height = args[2]
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
