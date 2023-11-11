@@ -13,6 +13,7 @@ class Rectangle(Base):
         """Defines a constructor for the Rectangle class."""
 
         super().__init__(id)
+
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         elif width <= 0:
@@ -159,7 +160,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
         if len(args) >= 3:
-            self.__height = args[2]
+                self.__height = args[3]
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
@@ -171,7 +172,13 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
         if len(args) >= 5:
-            self.__y = args[4]
+                self.__y = args[4]
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Defines a method that returns a Rectangle as a dictionary."""
+
+        return {'id': self.id, 'width': self.__width, 'height': self.__height,
+                'x': self.__x, 'y': self.__y}
