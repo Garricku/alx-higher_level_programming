@@ -145,7 +145,7 @@ class Rectangle(Base):
 
 
     def update(self, *args, **kwargs):
-        """Defines a method that updates values via the cmd line args input."""
+        """Defines a method that updates values of the class."""
 
         if len(args) >= 1:
             self.id = args[0]
