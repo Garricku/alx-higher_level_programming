@@ -127,4 +127,28 @@ class Base:
     def draw(list_rectangles, list_squares):
         """Defines a static method that draws all Rectangles and Squares."""
 
+    import turtle
+    import time
+    from random import randrange
+    """Defines the imported modules."""
+
+    turtle.Screen().colormode(255)
+
+    for shape in list_rectangles + list_squares:
+        t = turtle.Turtle()
+    t.color((255, 192, 203))
+    t.pensize(5)
+    t.penup()
+    t.pendown()
+    t.setpos((shape.x + t.pos()[0], shape.y - t.pos()[1]))
+    t.pensize(15)
+    t.forward(shape.width)
+    t.right(120)
+    t.forward(shape.height)
+    t.right(120)
+    t.forward(shape.width)
+    t.right(120)
+    t.end_fill()
+
+time.sleep(5)
 
