@@ -5,6 +5,7 @@
 import json
 import ast
 import sys
+import csv
 """Defines the imported modules."""
 
 
@@ -64,7 +65,18 @@ class Base:
     def create(cls, **dictionary):
         """Defines a class method. Returns a set instance of a class object."""
 
-        return cls.update(dictionary)
+        from models.rectangle import Rectangle
+        from models.square import Square
+        """Defines the imported modules methods Rectangle and Square."""
+
+        if cls is Rectangle:
+            dummy = Rectangle(1, 1)
+        elif cls is Square:
+            dummy = Square(1)
+        else:
+            return None
+        dummy.update(**dictionary)
+        return dummy
 
 
     @classmethod
@@ -81,3 +93,38 @@ class Base:
         except FileNotFoundError:
             return []
         return instances
+
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Defines the class method that serializes in CSV."""
+
+        if list_objs == None or len(list_objs) == 0:
+            return []
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline="") as csv_file:
+            writer = csv.writer(csv_file)
+            list_dicts = [obj.to_dictionary for obj in list_objs]
+            writer.writerow(list_dicts)
+
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Defines a class method that deserializes in CSV."""
+
+        filename = cls.__name__ + ".csv"
+        instances = []
+        try:
+            with open(filename, "r", newline="") as csv_file:
+                reader = csv.reader(csv_file)
+                instance = [cls.create(**row) for row in reader]
+            return instances
+        except FileNotFoundError:
+            return []
+
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Defines a static method that draws all Rectangles and Squares."""
+
+

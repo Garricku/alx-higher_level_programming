@@ -109,7 +109,7 @@ class Rectangle(Base):
 
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
-        elif value <= 0:
+        elif value < 0:
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
@@ -160,7 +160,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
         if len(args) >= 3:
-                self.__height = args[2]
+            self.__height = args[2]
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
@@ -172,7 +172,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
         if len(args) >= 5:
-                self.__y = args[4]
+            self.__y = args[4]
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
