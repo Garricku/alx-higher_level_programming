@@ -35,13 +35,12 @@ class Square(Rectangle):
             self.__y = y
             super().__init__(size, size, x, y, id)
 
-
     def __str__(self):
         """Defines a magic method that overrides other str magic methods."""
 
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.__x,
-                self.__y, self.__width)
-
+        return "[Square] ({}) {}/{} - {}".format(
+                self.id, self.__x, self.__y, self.__width
+                )
 
     @property
     def size(self):
@@ -78,7 +77,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
         if len(args) >= 3:
-                self.__x = args[2]
+            self.__x = args[2]
         else:
             for key, value in kwargs.items():
                 if key == "x":

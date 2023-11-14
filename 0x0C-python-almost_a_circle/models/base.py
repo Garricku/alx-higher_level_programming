@@ -17,29 +17,27 @@ class Base:
     def __init__(self, id=None):
         """Defines a class constuctor for the Base class."""
 
-        if id is not None and isinstance(id, int) == True:
+        if id is not None and isinstance(id, int) is True:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """Defines a static method. Returns list_dictionaries as a JSON str."""
 
-        if list_dictionaries == None or list_dictionaries == []:
+        if list_dictionaries is None or list_dictionaries == []:
             empty = "[]"
             return empty
         elif type(list_dictionaries) == list:
             return json.dumps(list_dictionaries)
 
-
     @classmethod
     def save_to_file(cls, list_objs):
         """Defines the class method that writes list_objs to a JSON string."""
 
-        if list_objs == None:
+        if list_objs is None:
             list_objs = []
         if isinstance(list_objs, list):
             list_dicts = [obj.to_dictionary() for obj in list_objs]
@@ -48,18 +46,16 @@ class Base:
             with open(filename, "w") as json_file:
                 json.dump(json_string, json_file)
 
-
     @staticmethod
     def from_json_string(json_string):
         """Defines a static method that returns json_string as a list."""
 
-        if json_string == None or json_string == "":
+        if json_string is None or json_string == "":
             empty = []
             return empty
         if type(json_string) == str:
             list_of_dicts = ast.literal_eval(json_string)
             return list_of_dicts
-
 
     @classmethod
     def create(cls, **dictionary):
@@ -78,7 +74,6 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-
     @classmethod
     def load_from_file(cls):
         """Defines a class method. Returns a list of instances."""
@@ -94,19 +89,17 @@ class Base:
             return []
         return instances
 
-
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Defines the class method that serializes in CSV."""
 
-        if list_objs == None or len(list_objs) == 0:
+        if list_objs is None or len(list_objs) == 0:
             return []
         filename = cls.__name__ + ".csv"
         with open(filename, "w", newline="") as csv_file:
             writer = csv.writer(csv_file)
             list_dicts = [obj.to_dictionary for obj in list_objs]
             writer.writerow(list_dicts)
-
 
     @classmethod
     def load_from_file_csv(cls):
@@ -121,7 +114,6 @@ class Base:
             return instances
         except FileNotFoundError:
             return []
-
 
     @staticmethod
     def draw(list_rectangles, list_squares):

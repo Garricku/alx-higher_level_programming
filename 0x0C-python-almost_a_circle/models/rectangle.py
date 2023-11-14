@@ -9,7 +9,7 @@ from models.base import Base
 class Rectangle(Base):
     """Defines the subclass Rectangle, which inherits from Base."""
 
-    def __init__(self, width, height, x=0,y=0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """Defines a constructor for the Rectangle class."""
 
         super().__init__(id)
@@ -42,7 +42,6 @@ class Rectangle(Base):
         else:
             self.__y = y
 
-
     @property
     def width(self):
         """Defines the getter method for width."""
@@ -60,7 +59,6 @@ class Rectangle(Base):
         else:
             self.__width = value
 
-
     @property
     def height(self):
         """Defines the getter method for height."""
@@ -69,7 +67,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """Defines the setter for height in which value is set to the height."""
+        """Defines the setter for height in which value is set to the heigt."""
 
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -77,7 +75,6 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         else:
             self.__height = value
-
 
     @property
     def x(self):
@@ -95,7 +92,6 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         else:
             self.__x = value
-
 
     @property
     def y(self):
@@ -119,7 +115,6 @@ class Rectangle(Base):
 
         return self.__width * self.__height
 
-
     def display(self):
         """Defines a method that prints the class object with a # to stdout."""
 
@@ -136,13 +131,11 @@ class Rectangle(Base):
                 if x_axis == self.__width - 1:
                     print()
 
-
     def __str__(self):
         """Defines the override of the magic method __str__."""
 
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
-
 
     def update(self, *args, **kwargs):
         """Defines a method that updates values of the class."""
