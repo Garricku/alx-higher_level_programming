@@ -1,0 +1,1 @@
+This is a readme for the alx-higher level programming repository for projects related to the ALX SE Programs study course on higher level programing and will contain various projects done for the purpose of learning higher level programing.

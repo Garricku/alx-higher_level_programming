@@ -30,18 +30,18 @@ Module add_integer
 	Test_6 - Adding no arguments
 		>>> add_integer()
 		Traceback (most recent call last):
-			...
+		...
 		TypeError: a must be an integer
 		
 
 	Test_7 - Add a number to a character
 		>>> add_integer(a, 2)
 		Traceback (most recent call last):
-			...
+		...
 		TypeError: a must be an integer
 
 	Test_8 - Add an integer to a string
 		>>> add_integer(1, school)
 		Traceback (most recent call last):
-			...
+		...
 		TypeError: b must be an integer

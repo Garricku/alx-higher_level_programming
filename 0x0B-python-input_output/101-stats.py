@@ -38,6 +38,7 @@ if __name__ == "__main__":
                 pass
             if count % 10 == 0:
                 print_metrics(total_size, status_codes)
+
     except KeyboardInterrupt:
         print_metrics(total_size, status_codes)
         raise
