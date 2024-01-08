@@ -1,0 +1,1 @@
+This directory contains files for the project on JavaScripting for ALX Software Engineering. JavaScript Warm up! Let's learn JavaScript by completing tasks. This project consists out of 14 mandatory tasks and 4 advanced tasks, tasks 0-13 and advanced task 100-103.
