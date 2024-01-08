@@ -5,15 +5,15 @@ function factorial (n) {
   if (isNaN(n)) {
     return 1;
   } else if (n === 0) {
-      return 1;
+    return 1;
   } else {
-      return n * factorial(n - 1);
+    return n * factorial(n - 1);
   }
 }
 
 const num = parseInt(process.argv[2]);
 if (num > 100) {
-  console.log('Infinity')
+  console.log('Infinity');
 } else {
   console.log(factorial(num));
 }
