@@ -5,11 +5,14 @@
  * passed.
  */
 const { argv } = require('node:process');
+const noArg = 'No argument';
+const oneArg = 'Argument found';
+const multipleArgs = 'Arguments found';
 
 if (argv.length <= 2) {
-  console.log('No argument');
+  console.log(noArg);
 } else if (argv.length === 3) {
-  console.log('Argument found');
+  console.log(oneArg);
 } else {
-  console.log('Arguments found');
+  console.log(multipleArgs);
 }
