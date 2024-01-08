@@ -4,14 +4,14 @@
  * Write a script that prints a message depending of the number of arguments
  * passed.
  */
-const { argv } = require('node:process');
+const numArgs = process.argv.length - 2;
 const noArg = 'No argument';
 const oneArg = 'Argument found';
 const multipleArgs = 'Arguments found';
 
-if (argv.length <= 2) {
+if (numArgs <= 0) {
   console.log(noArg);
-} else if (argv.length === 3) {
+} else if (numArgs === 1) {
   console.log(oneArg);
 } else {
   console.log(multipleArgs);
