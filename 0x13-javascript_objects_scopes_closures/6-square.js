@@ -2,9 +2,9 @@
 /* Write a class Square that defines a square and inherits from Rectangle
  * of 5-square.js
  */
-const Rectangle = require('./5-square');
+const Square2 = require('./5-square');
 
-class Square extends Rectangle {
+class Square extends Square2 {
   charPrint (c) {
     let chara = 'C';
     let shape = '';
