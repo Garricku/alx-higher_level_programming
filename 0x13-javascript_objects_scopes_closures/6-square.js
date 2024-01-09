@@ -9,7 +9,7 @@ class Square extends Rectangle {
     let chara = 'C';
     let shape = '';
     let size = 0;
-    if (!c) {
+    if (c === undefined) {
       chara = 'X';
     }
     while (size < this.width) {
