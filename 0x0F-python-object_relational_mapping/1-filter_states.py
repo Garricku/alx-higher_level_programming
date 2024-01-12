@@ -22,7 +22,7 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
 
-    sql = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
+    st = """SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"""
     cur = db.cursor()
     cur.execute(sql)
 

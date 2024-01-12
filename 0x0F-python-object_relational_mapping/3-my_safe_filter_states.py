@@ -16,11 +16,16 @@ Defines the imported modules
 
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
-                         passwd=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=sys.argv[1],
+            passwd=sys.argv[2],
+            db=sys.argv[3]
+            )
 
-    sql = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC"\
-          .format(sys.argv[4])
+    s = """SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC"""\
+        .format(sys.argv[4])
     cur = db.cursor()
     cur.execute(sql)
 
