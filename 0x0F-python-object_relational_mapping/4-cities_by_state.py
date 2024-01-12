@@ -20,10 +20,12 @@ if __name__ == "__main__":
             )
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM cities ORDER BY id ASC")
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities\
+                INNER JOIN states ON states.id=cities.state_id ORDER BY\
+                cities.id ASC")
 
     for row in cur.fetchall():
-        print(row)
+        print("({}, '{}', '{}')".format(row[0], row[1], row[2]))
 
     cur.close()
     db.close()
