@@ -27,7 +27,7 @@ if __name__ == "__main__":
     cur.execute(s)
 
     for row in cur.fetchall():
-        print(row)
+        print("({}, '{}')".format(row[0], row[1]))
 
     cur.close()
     db.close()
