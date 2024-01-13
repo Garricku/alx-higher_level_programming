@@ -25,6 +25,5 @@ if __name__ == "__main__":
     session.add(new_city)
     session.commit()
 
-    print(new_city.id)
 
     session.close()
