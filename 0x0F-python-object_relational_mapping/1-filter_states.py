@@ -22,9 +22,14 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
 
-    s = "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY states.id ASC"
+    "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC"
     cur = db.cursor()
-    cur.execute(s)
+    cur.execute("""
+                SELECT *
+                FROM states
+                WHERE name LIKE BINARY 'N%'
+                ORDER BY states.id ASC"""
+                )
 
     for row in cur.fetchall():
         print("({}, '{}')".format(row[0], row[1]))
