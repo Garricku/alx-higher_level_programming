@@ -11,7 +11,6 @@ import requests
 if __name__ == "__main___":
     url = sys.argv[1]
     response = requests.get(url)
-    response.raise_for_status()
     if response.status_code >= 400:
         print("Error code: {}".format(response.status_code))
     else:
