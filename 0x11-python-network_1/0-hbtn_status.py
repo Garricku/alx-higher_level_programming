@@ -2,7 +2,7 @@
 """This module featches a URL https://alx-intranet.hbtn.io/status"""
 
 import urllib.request
-"""This module is used to work with urls for html requests & responces"""
+"""This module is used to work with urls for html requests & responses"""
 
 
 url = "https://alx-intranet.hbtn.io/status"
