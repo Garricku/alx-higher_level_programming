@@ -6,6 +6,7 @@ of the X-Request-Id variable found in the header of the response.
 
 import sys
 import urllib.request
+"""These modules help to get the url as an argument and manages the requests"""
 
 
 url = sys.argv[1]
