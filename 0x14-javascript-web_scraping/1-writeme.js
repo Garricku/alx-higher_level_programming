@@ -13,7 +13,7 @@ const filePath = process.argv[2];
 const content = process.argv[3];
 
 if (!filePath || !content) {
-  console.error('Please provide both a valid file path and content.');
+  // do nothing
 } else {
   writeToFile(filePath, content);
 }
