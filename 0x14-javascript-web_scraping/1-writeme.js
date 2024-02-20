@@ -4,7 +4,7 @@ const fs = require('fs');
 function writeToFile (filePath, content) {
   fs.writeFile(filePath, content, { encoding: 'utf-8' }, (err) => {
     if (err) {
-      console.error(err);
+      // do nothing;
     }
   });
 }
