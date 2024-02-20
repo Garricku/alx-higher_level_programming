@@ -14,7 +14,7 @@ function getStatus (url) {
 // Usage: node getStatus.js <URL>
 const url = process.argv[2];
 if (!url) {
-  //do nothing
+  // do nothing
 } else {
   getStatus(url);
 }
