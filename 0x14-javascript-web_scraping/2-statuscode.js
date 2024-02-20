@@ -4,9 +4,9 @@ const request = require('request');
 function getStatus (url) {
   request.get(url, (error, response) => {
     if (error) {
-      console.error('Code:', error.statusCode);
+      console.error('code:', error.statusCode);
     } else {
-      console.log('Code:', response.statusCode);
+      console.log('code:', response.statusCode);
     }
   });
 }
