@@ -14,7 +14,7 @@ function getStatus (url) {
 // Usage: node getStatus.js <URL>
 const url = process.argv[2];
 if (!url) {
-  console.error('Please provide a valid URL as an argument.');
+  //do nothing
 } else {
   getStatus(url);
 }
